@@ -112,7 +112,7 @@ public class InputParametersReader {
             System.exit(1);
         }
 
-        return new Parameters(numberOfItems, items, knapsackCapacity, populationSize, maximumGenerations, crossoverProbability, mutationProbability);
+        return new Parameters(items, knapsackCapacity, populationSize, maximumGenerations, crossoverProbability, mutationProbability);
     }
 
     private static boolean isInteger(String str) {

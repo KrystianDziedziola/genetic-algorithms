@@ -16,7 +16,7 @@ public class Chromosome {
         return new Chromosome(0);
     }
 
-    public int getValue() {
-        return value;
+    public boolean isPositive() {
+        return value == 1;
     }
 }

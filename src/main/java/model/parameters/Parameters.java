@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Parameters {
 
-    private final int numberOfItems;
     private final List<Item> items;
     private final int knapsackCapacity;
     private final int populationSize;
@@ -12,18 +11,13 @@ public class Parameters {
     private final double crossoverProbability;
     private final double mutationProbability;
 
-    public Parameters(int numberOfItems, List<Item> items, int knapsackCapacity, int populationSize, int maximumGenerations, double crossoverProbability, double mutationProbability) {
-        this.numberOfItems = numberOfItems;
+    public Parameters(List<Item> items, int knapsackCapacity, int populationSize, int maximumGenerations, double crossoverProbability, double mutationProbability) {
         this.items = items;
         this.knapsackCapacity = knapsackCapacity;
         this.populationSize = populationSize;
         this.maximumGenerations = maximumGenerations;
         this.crossoverProbability = crossoverProbability;
         this.mutationProbability = mutationProbability;
-    }
-
-    public int getNumberOfItems() {
-        return numberOfItems;
     }
 
     public List<Item> getItems() {
@@ -53,8 +47,7 @@ public class Parameters {
     @Override
     public String toString() {
         return "Parameters{" +
-                "numberOfItems=" + numberOfItems +
-                ", items=" + items +
+                " items=" + items +
                 ", knapsackCapacity=" + knapsackCapacity +
                 ", populationSize=" + populationSize +
                 ", maximumGenerations=" + maximumGenerations +
