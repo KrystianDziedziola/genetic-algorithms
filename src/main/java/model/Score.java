@@ -8,17 +8,32 @@ public class Score {
 
     private final double fitness;
     private final List<Item> items;
+    private final Gene gene;
 
-    public Score(double fitness, List<Item> items) {
+    Score(double fitness, List<Item> items, Gene gene) {
         this.fitness = fitness;
         this.items = items;
+        this.gene = gene;
     }
 
-    public double getFitness() {
+    double getFitness() {
         return fitness;
+    }
+
+    Gene getGene() {
+        return gene;
     }
 
     public List<Item> getItems() {
         return items;
+    }
+
+    @Override
+    public String toString() {
+        return "Score{" +
+                "fitness=" + fitness +
+                ", items=" + items +
+                ", gene=" + gene +
+                '}';
     }
 }
